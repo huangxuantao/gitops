@@ -1,0 +1,19 @@
+# 安装 ingress-nginx
+# kubectl create -f https://ghproxy.com/https://raw.githubusercontent.com/lyzhang1999/resource/main/ingress-nginx/ingress-nginx.yaml
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-world-flask
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: hello-world-flask
+                port:
+                  number: 5000
+            path: /
+            pathType: Exact
