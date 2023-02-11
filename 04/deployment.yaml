@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: hello-world-flask
-          image: lyzhang1999/hello-world-flask:latest
+          image: lyzhang1999/hello-world-flask:v1
           resources:
             requests:
               cpu: 100m
